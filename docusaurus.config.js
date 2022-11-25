@@ -101,7 +101,7 @@ const config = {
               },
               {
                 label: 'Gravity SDK',
-                to: '/docs/development/gravity-sdk',
+                to: '/docs/development/gravity-sdk/android-sdk',
               },
             ],
           },
