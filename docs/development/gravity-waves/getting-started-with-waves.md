@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Getting Started with Waves
 
-To develop Waves, you would need the [**Gravity SDK**](../gravity-sdk.md) added in your projects. Gravity SDK works both ways to help develop the Waves as well as to access them easily in your projects.
+To develop Waves, you would need the [**Gravity SDK**](../gravity-sdk/android-sdk.md) added in your projects. Gravity SDK works both ways to help develop the Waves as well as to access them easily in your projects.
 
 
 ## Functions in Waves

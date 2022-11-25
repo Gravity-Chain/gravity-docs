@@ -141,6 +141,7 @@ const config = {
       prism: {
         theme: darkCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ["kotlin", "java"],
       },
     }),
 };
