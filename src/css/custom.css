@@ -1,0 +1,44 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #0090A4;
+  --ifm-color-primary-dark: #03383F;
+  --ifm-color-primary-darker: #03383F;
+  --ifm-color-primary-darkest: #03383F;
+  --ifm-color-primary-light: #03383F;
+  --ifm-color-primary-lighter: #03383F;
+  --ifm-color-primary-lightest: #03383F;
+  --ifm-code-font-size: 95%;
+  /* --ifm-footer-background-color: red; */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #0ACAE3;
+  --ifm-color-primary-dark: #03383F;
+  --ifm-color-primary-darker: #03383F;
+  --ifm-color-primary-darkest: #03383F;
+  --ifm-color-primary-light: #03383F;
+  --ifm-color-primary-lighter: #03383F;
+  --ifm-color-primary-lightest: #03383F;
+  /* --ifm-footer-background-color: red; */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+
+@font-face {
+  font-family: Universo;
+  src: url("https://firebasestorage.googleapis.com/v0/b/gravity-chain.appspot.com/o/fonts%2FuniversoBlack.otf?alt=media&token=5dcc86fd-5bed-4a13-8b89-eae558af4065") format("opentype");
+  src: url("https://firebasestorage.googleapis.com/v0/b/gravity-chain.appspot.com/o/fonts%2FuniversoBlack.ttf?alt=media&token=b0a369a7-9a06-4a31-8893-951dfbdf44f6") format("truetype");
+  src: url("https://firebasestorage.googleapis.com/v0/b/gravity-chain.appspot.com/o/fonts%2FuniversoBlack.woff?alt=media&token=4ad2bf62-5884-4005-9d5a-4ecc515ec615") format("woff");
+  src: url("https://gravity-web-assets.s3.amazonaws.com/universoBlack.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
