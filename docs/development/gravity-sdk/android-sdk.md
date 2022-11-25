@@ -40,7 +40,7 @@ To interact with Waves, there are two types of functionalities, permissionless a
 To build Waves, you can check out the documentation here: [**Getting Started With Waves**](../gravity-waves/getting-started-with-waves.md)
 
 
-# Getting Started
+## Getting Started
 Let's get started by implementing the Gravity SDK
 
 ### Basic Authentication
@@ -49,7 +49,8 @@ Let's get started by implementing the Gravity SDK
 // initialise Gravity instance in your Application/MainActivity
 Gravity.init(this)
 
-// to keep a seamless interaction within your app and Gravity Wallet, you should add these intent-filters
+// to keep a seamless interaction within your app and Gravity Wallet, 
+// you should add these intent-filters in your AndroidManifest.xml
 <intent-filter>
     <data
         android:host="open"
@@ -148,11 +149,123 @@ override fun onResume() {
         val userIdentity: String? = gravityResponse?.userIdentity
     }    
 }
-
-
 ```
 
+## Interacting with Gravity Waves
 
+### Checking user balance on a Wave
+When it comes to interacting with any Wave, mose fuctions are same but only need additional data such as Wave address and/or method and it's parameters
+
+```kotlin
+// Gravity SDK API-level calls works best within a ViewModel
+val balanceOfWave = MutableLiveData<String?>()
+
+fun getBalanceOf(contractAddress: String, owner: String) {
+    viewModelScope.launch {
+        Gravity.getInstance()
+            ?.getBalanceOf(
+                contractAddress,
+                owner
+            )?.onSuccess {
+                balanceOfWave.postValue("${it.response}")
+
+            }?.onFailure {
+                balanceOfWave.postValue(null)
+            }
+    }
+}
+```
+
+### Getting Wave information
+You can get Wave level information such as Token name, Token symbol and Total supply
+
+```kotlin
+// Gravity SDK API-level calls works best within a ViewModel
+val totalSupplyRez = MutableLiveData<String?>()
+val tokenNameRez = MutableLiveData<String?>()
+val tokenSymbolRez = MutableLiveData<String?>()
+
+fun getTokenName(contractAddress: String) {
+    viewModelScope.launch {
+        Gravity.getInstance()
+            ?.getTokenName(
+                contractAddress
+            )?.onSuccess {
+                tokenNameRez.postValue("${it.response}")
+
+            }?.onFailure {
+                tokenNameRez.postValue(null)
+            }
+    }
+}
+
+fun getTokenSymbol(contractAddress: String) {
+    viewModelScope.launch {
+        Gravity.getInstance()
+            ?.getTokenSymbol(
+                contractAddress
+            )?.onSuccess {
+                tokenSymbolRez.postValue("${it.response}")
+
+            }?.onFailure {
+                println("failed: ${it.message}")
+                tokenSymbolRez.postValue(null)
+            }
+    }
+}
+
+fun getTotalSupply(contractAddress: String) {
+    viewModelScope.launch {
+        Gravity.getInstance()
+            ?.getTotalSupply(
+                contractAddress
+            )?.onSuccess {
+                totalSupplyRez.postValue("${it.response}")
+
+            }?.onFailure {
+                totalSupplyRez.postValue(null)
+            }
+    }
+}
+```
+
+### Sending a transaction on Wave (transfer)
+Once you have authenticated by wallet connection with the user, you can now trigger Wave transaction requests in your app
+
+```kotlin
+Gravity.getInstance()?.sendTransaction(
+    GravityAuth("yourURIScheme://open"),
+    GravityTransaction(
+        toAddress,
+        BigDecimal(amount),
+        thirdPartyAuthToken,
+        TransactionMeta(contractAddress, GravityConstants.GRAVITY_CONTRACT_METHOD_TRANSFER)
+    )
+)
+
+// Once again in the same flow as authentication, listen for the response inside onResume
+override fun onResume() {
+    super.onResume()
+    val gravityResponse = Gravity.getInstance()?.fetchData()
+
+    /**
+    * @param walletTransactionStatus is only received in the case
+    * when a transaction was triggered
+    */
+    if (!gravityResponse.walletTransactionStatus.isNullOrEmpty()) {
+        val didTransactionSucceed: Boolean = gravityResponse.walletTransactionStatus.toBoolean()
+        
+        // if the transaction request did succeed, then you'll get the transactionId for the same
+        if(didTransactionSucceed == true) {
+            val transactionId: String? = gravityResponse.walletTransactionId
+        }
+    } else {
+        val authToken: String? = gravityResponse?.authToken
+        val userAddress: String? = gravityResponse?.userAddress
+        val userIdentity: String? = gravityResponse?.userIdentity
+    }    
+}
+```
 
 
 

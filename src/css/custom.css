@@ -42,3 +42,8 @@
   font-style: normal;
   font-display: swap;
 }
+
+ .table-of-contents__link--active {
+  font-weight: bold;
+  font-size: medium;
+ }
