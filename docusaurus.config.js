@@ -61,6 +61,7 @@ const config = {
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
+      image: "https://firebasestorage.googleapis.com/v0/b/gravity-chain.appspot.com/o/og-image.png?alt=media&token=e32a5bee-d23a-45e9-bfbb-42a933266317",
       navbar: {
         title: '',
         logo: {
