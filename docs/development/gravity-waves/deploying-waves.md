@@ -16,6 +16,11 @@ java -jar gravitywallet.jar --login='your 12 words seed phrase'
 java -jar gravitywallet.jar --deploy='absolutePathOfTheFile/DemoSmartContract.kt'
 ```
 
+3. Once everything checks out, you'll be asked to enter the total supply for the token
+```
+Enter TotalSupply (max 10000000000000000): YOUR_INPUT
+```
+
 Once the deploy command is executed, you'll get the status and Wave address that you can use to access it:
 ```
 {
