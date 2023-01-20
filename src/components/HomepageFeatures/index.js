@@ -13,16 +13,16 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Gravity blockchain has zero gas fees',
+    title: 'Gravity has zero gas fees',
     // Svg: require('@site/static/img/chain.svg').default,
     description: (
       <>
-        Transactions on Gravity blockchain are always free without any gas fee. Since you as a user is also a miner that means the chain does not need any additional tokens as fees.
+        Transactions on Gravity blockchain are always free without any gas fee. Since you as a user is also a miner.
       </>
     ),
   },
   {
-    title: 'Easiest blockchain to develop dApps',
+    title: 'Easiest dApps to develop',
     // Svg: require('@site/static/img/code_img.svg').default,
     description: (
       <>

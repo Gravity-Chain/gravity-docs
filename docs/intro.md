@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## What is Gravity Chain?
 
-Gravity is worlds first mobile powered open source blockchain infrastructure that can enable mining on mobile using unique consensus protocol called **Proof of Participation(PoP)**.
+Gravity is world's first mobile powered open source blockchain infrastructure that can enable mining on mobile using unique consensus protocol called **Proof of Participation(PoP)**.
 
 ## Why Gravity exists?
 

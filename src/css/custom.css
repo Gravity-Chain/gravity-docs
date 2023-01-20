@@ -31,16 +31,26 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+@font-face {
+	font-family: MicroExtendBold;
+	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_bold.otf") format("opentype");
+	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_bold.ttf") format("truetype");
+	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_bold.woff") format("woff");
+	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_bold.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
 
 @font-face {
-  font-family: Universo;
-  src: url("https://firebasestorage.googleapis.com/v0/b/gravity-chain.appspot.com/o/fonts%2FuniversoBlack.otf?alt=media&token=5dcc86fd-5bed-4a13-8b89-eae558af4065") format("opentype");
-  src: url("https://firebasestorage.googleapis.com/v0/b/gravity-chain.appspot.com/o/fonts%2FuniversoBlack.ttf?alt=media&token=b0a369a7-9a06-4a31-8893-951dfbdf44f6") format("truetype");
-  src: url("https://firebasestorage.googleapis.com/v0/b/gravity-chain.appspot.com/o/fonts%2FuniversoBlack.woff?alt=media&token=4ad2bf62-5884-4005-9d5a-4ecc515ec615") format("woff");
-  src: url("https://gravity-web-assets.s3.amazonaws.com/universoBlack.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+  font-family: MicroExtendRegular;
+	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_regular.otf") format("opentype");
+	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_regular.ttf") format("truetype");
+	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_regular.woff") format("woff");
+	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_regular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;	
 }
 
  .table-of-contents__link--active {

@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'GravityChain',
-  tagline: 'Worlds first mobile powered blockchain',
+  tagline: "World's first mobile powered blockchain",
   url: 'https://docs.gravitychain.xyz',
   baseUrl: '/',
   onBrokenLinks: 'throw',
