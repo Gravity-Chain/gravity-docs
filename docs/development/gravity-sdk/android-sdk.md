@@ -28,7 +28,7 @@ To begin any interaction between any user and a Wave, the first step is to conne
 To interact with Waves, there are two types of functionalities, permissionless and permissioned:
 
 #### Execution (without user permission)
-1. Check balance of the user for GRT or on any contract.
+1. Check balance of the user for GRVT or on any contract.
 2. Get the address and identies connected of the user.
 
 #### Trigger (requires user's real-time consent)
