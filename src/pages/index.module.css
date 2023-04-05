@@ -23,7 +23,7 @@
 }
 
 .bg {
-  background-image: url(/static/img/header-bg.png);
+  background-image: url(/static/img/WEBBG.png);
 }
 
 .title {
@@ -42,4 +42,3 @@
 .pt20 {
   padding-top: 20px;
 }
-

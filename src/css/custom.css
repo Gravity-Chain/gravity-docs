@@ -6,54 +6,79 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #0090A4;
-  --ifm-color-primary-dark: #03383F;
-  --ifm-color-primary-darker: #03383F;
-  --ifm-color-primary-darkest: #03383F;
-  --ifm-color-primary-light: #03383F;
-  --ifm-color-primary-lighter: #03383F;
-  --ifm-color-primary-lightest: #03383F;
+  --ifm-color-primary: #1C7EFF;
+  --ifm-color-primary-dark: #898BFF;
+  --ifm-color-primary-darker: #898BFF;
+  --ifm-color-primary-darkest: #898BFF;
+  --ifm-color-primary-light: #898BFF;
+  --ifm-color-primary-lighter: #898BFF;
+  --ifm-color-primary-lightest: #898BFF;
   --ifm-code-font-size: 95%;
-  /* --ifm-footer-background-color: red; */
+  --ifm-navbar-background-color: #000000;
+  --ifm-footer-background-color: #000000;
+  --ifm-background-color: black;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-background-color: black;
+  --ifm-font-base-color: white;
+  --ifm-font-base-color-inverse: white;
+  --ifm-font-color-base: white;
+  --ifm-font-color-base-inverse: white;
+  --ifm-font-color-secondary: white;
+}
+
+[data-theme='dark']:root {
+  --ifm-background-color: black;
+  --ifm-font-base-color: white;
+  --ifm-font-base-color-inverse: white;
+  --ifm-font-color-base: white;
+  --ifm-font-color-base-inverse: white;
+  --ifm-font-color-secondary: white;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #0ACAE3;
-  --ifm-color-primary-dark: #03383F;
-  --ifm-color-primary-darker: #03383F;
-  --ifm-color-primary-darkest: #03383F;
-  --ifm-color-primary-light: #03383F;
-  --ifm-color-primary-lighter: #03383F;
-  --ifm-color-primary-lightest: #03383F;
-  /* --ifm-footer-background-color: red; */
+  --ifm-color-primary: #1C7EFF;
+  --ifm-color-primary-dark: #898BFF;
+  --ifm-color-primary-darker: #898BFF;
+  --ifm-color-primary-darkest: #898BFF;
+  --ifm-color-primary-light: #898BFF;
+  --ifm-color-primary-lighter: #898BFF;
+  --ifm-color-primary-lightest: #898BFF;
+  --ifm-navbar-background-color: #000000;
+  --ifm-footer-background-color: #000000;
+  --ifm-background-color: black;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: black;
+  --ifm-font-base-color: white;
+  --ifm-font-base-color-inverse: white;
+  --ifm-font-color-base: white;
+  --ifm-font-color-base-inverse: white;
+  --ifm-font-color-secondary: white;
 }
 
 @font-face {
-	font-family: MicroExtendBold;
-	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_bold.otf") format("opentype");
-	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_bold.ttf") format("truetype");
-	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_bold.woff") format("woff");
-	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_bold.woff2") format("woff2");
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
+  font-family: MicroExtendBold;
+  src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_bold.otf") format("opentype");
+  src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_bold.ttf") format("truetype");
+  src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_bold.woff") format("woff");
+  src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: MicroExtendRegular;
-	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_regular.otf") format("opentype");
-	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_regular.ttf") format("truetype");
-	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_regular.woff") format("woff");
-	src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_regular.woff2") format("woff2");
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;	
+  src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_regular.otf") format("opentype");
+  src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_regular.ttf") format("truetype");
+  src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_regular.woff") format("woff");
+  src: url("https://gravity-web-assets.s3.amazonaws.com/microextend_regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
- .table-of-contents__link--active {
+.table-of-contents__link--active {
   font-weight: bold;
   font-size: medium;
- }
+}

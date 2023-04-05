@@ -66,7 +66,7 @@ const config = {
         title: '',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/doc_logo.svg',
+          src: 'img/docs.png',
         },
         // items: [
         //   {
